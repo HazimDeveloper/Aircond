@@ -1,0 +1,623 @@
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <link rel="stylesheet" href="{% static 'about.css' %}" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="icon" href="{% static 'PICO-LOGO-SHORT.png' %}" type="image/gif">
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  
+  overflow-x:hidden;
+  /* overflow-y: hidden; */
+}
+
+
+/* -----------------company----------------------- */
+.company {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.company-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.company-info {
+  width: 100%;
+  margin-right: 4rem;
+}
+
+.company-info span {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.company-info span .our {
+  color: #4267b2;
+}
+
+.company-info p{
+  font-size: 1.1rem;
+}
+/* ----------------------------------------------- */
+
+.team {
+  display: flex;
+  justify-content: center;
+}
+
+.team span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  border-bottom: 4px solid #ffdc0e;
+}
+/* 
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+} */
+
+.card {
+  position: relative;
+  background: #fff;
+  max-width: 350px;
+  width: 350px;
+  margin: 20px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 10%);
+}
+
+.card-image {
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+.card-image img {
+  max-width: 100%;
+  height: auto;
+  visibility: hidden;
+}
+
+.card-title span {
+  visibility: hidden;
+}
+
+.yellow-surname {
+  color: #ffdc0e;
+}
+
+.card-description span {
+  visibility: hidden;
+}
+
+.card-mediaIcons a i {
+  visibility: hidden;
+}
+
+.card-info {
+  position: relative;
+  color: #222;
+  padding: 20px;
+}
+
+.card-info h3 {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.card-info h4 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.card-info a {
+  text-decoration: none;
+  color: navy;
+}
+
+.card-info p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.card-info .card-mediaIcons {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-info .card-mediaIcons a {
+  color: #999;
+  font-size: 1.4em;
+  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  transition: color 0.3s ease;
+}
+
+.card-info .card-mediaIcons a:hover {
+  color: #222;
+}
+
+.card-mediaIcons a img {
+  width: 40px;
+}
+
+.loading {
+  position: relative;
+  background: #e2e2e2;
+  overflow: hidden;
+}
+
+.loading:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: translateX(-100%);
+  animation: loading 1.5s infinite;
+}
+
+.info {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@keyframes loading {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ------------------------------footer---------------------------------------- */
+footer {
+  background: #000;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+footer .content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 30px 40px 40px 40px;
+}
+footer .content .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.content .top .logo-details {
+  color: #fdd166;
+  font-size: 30px;
+}
+.content .top .media-icons {
+  display: flex;
+}
+.content .top .media-icons a {
+  height: 40px;
+  width: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+  transition: all 0.4s ease;
+}
+.top .media-icons a:nth-child(1) {
+  background: #4267b2;
+}
+.top .media-icons a:nth-child(1):hover {
+  color: #4267b2;
+  background: #fff;
+}
+
+.top .media-icons a:nth-child(2) {
+  background: #e1306c;
+}
+.top .media-icons a:nth-child(2):hover {
+  color: #e1306c;
+  background: #fff;
+}
+
+footer .content .link-boxes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .content .link-boxes .box {
+  width: calc(100% / 5 - 10px);
+}
+.content .link-boxes .box .link_name {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  position: relative;
+}
+.link-boxes .box .link_name::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 35px;
+  background: #fdd166;
+}
+.content .link-boxes .box li {
+  margin: 6px 0;
+  list-style: none;
+}
+.content .link-boxes .box li a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: all 0.4s ease;
+}
+.content .link-boxes .box li a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.content .link-boxes .input-box {
+  margin-right: 55px;
+}
+.link-boxes .input-box input {
+  height: 40px;
+  width: calc(100% + 55px);
+  outline: none;
+  border: 2px solid #afafb6;
+  background: #140b5c;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 15px;
+  color: #fff;
+  margin-top: 5px;
+}
+.link-boxes .input-box input::placeholder {
+  color: #afafb6;
+  font-size: 16px;
+}
+.link-boxes .input-box input[type="button"] {
+  background: #fff;
+  color: #140b5c;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 4px 0;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.input-box input[type="button"]:hover {
+  opacity: 1;
+}
+footer .bottom-details {
+  width: 100%;
+  background: #000;
+  border-top: 0.5px solid #fff;
+}
+footer .bottom-details .bottom_text {
+  max-width: 1250px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.bottom-details .bottom_text span,
+.bottom-details .bottom_text a {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.bottom-details .bottom_text a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+.bottom-details .bottom_text a {
+  margin-right: 10px;
+}
+
+/* ------------------------------------------media-footer------------------------------------------- */
+@media (max-width: 900px) {
+  .company-info {
+    width: 100%;
+    margin-right: 0rem;
+    margin-left: 1rem;
+  }
+  .company-info p{
+    margin-right: 2rem;
+    text-align: center;
+  }
+  .company-info span {
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  .team {
+    display: flex;
+    justify-content: center;
+  }
+
+  .team span {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+  .company {
+    display: flex;
+    flex-direction: column;
+  }
+  .img {
+    margin-left: 0rem;
+  }
+  footer .content .link-boxes {
+    flex-wrap: wrap;
+  }
+  footer .content .link-boxes .input-box {
+    width: 40%;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 700px) {
+  footer {
+    position: relative;
+  }
+  .content .top .logo-details {
+    font-size: 26px;
+  }
+  .content .top .media-icons a {
+    height: 35px;
+    width: 35px;
+    font-size: 14px;
+    line-height: 35px;
+  }
+  footer .content .link-boxes .box {
+    width: calc(100% / 3 - 10px);
+  }
+  footer .content .link-boxes .input-box {
+    width: 60%;
+  }
+  .bottom-details .bottom_text span,
+  .bottom-details .bottom_text a {
+    font-size: 12px;
+  }
+}
+@media (max-width: 520px) {
+  footer::before {
+    top: 145px;
+  }
+  footer .content .top {
+    flex-direction: column;
+  }
+  .content .top .media-icons {
+    margin-top: 16px;
+  }
+  footer .content .link-boxes .box {
+    width: calc(100% / 2 - 10px);
+  }
+  footer .content .link-boxes .input-box {
+    width: 100%;
+  }
+}
+.header {
+    background-color:#333333;
+  }
+   
+  .container-p {
+    /* max-width: 870px; */
+    margin: 0 0;
+    padding: 0 10px;
+  }
+  .nav {
+    position: relative;
+    left: 480px;
+
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .nav li  {
+    display:inline;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform:uppercase;
+    margin-left:10px;
+    margin-right:10px;
+    cursor: pointer;
+  }
+@media(max-width:320px){
+  .company-info p{
+    margin-right: 0rem;
+  }
+   
+
+}
+
+.footer-p {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+position: relative;
+top:24px;
+  }
+  
+  .footer-p p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 30px;
+  }
+  
+  .supporting {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+  
+  .supporting .col {
+    float: left;
+    width: 33%;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+  }
+  
+  .supporting img {
+    height: 82px;
+  }
+  
+  .supporting h2 {
+    font-weight: 600;
+    font-size: 23px;
+    text-transform: uppercase;
+  }
+  
+  .supporting p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 50px;
+    margin-bottom: 40px;
+  }
+  
+  .clearfix {
+    clear: both;
+  }
+  
+/* ---------------------------------------------------------------------------- */
+  </style>
+  <body>
+    <div class="header">
+        <div class="container">
+          <ul class="nav">
+            <li><a style="color:white;text-decoration:none" href="index.html">Home</a></li>
+            <li><a style="color:white;text-decoration:none" href="about_us.html">About</a></li>
+                      <li><a style="color:white;text-decoration:none" href="products.html">Product</a></li>
+            <li><a style="color:white;text-decoration:none" href="faq.html">FAQ</a> </li>
+            
+            <li><a style="color:white;text-decoration:none" href="testimonial.html">Testimonial</a> </li>
+            <li><a style="color:white;text-decoration:none" href="contact.html">Contact</a> </li>
+          </ul>
+        </div>
+      </div>
+    <!-- -----------------------------------------------company---------------------------------------------------------------- -->
+    <div class="company">
+      <div class="img" style="margin: 60px;">
+        <img src="img/aircond.jpg" style="position: relative;top:150px" width="600px" height="300px" alt="" />
+      </div>
+      <div class="company-info" style="height: 780px;">
+        <span>Provide a Professional Services<span class="our"> in Malaysia</span></span>
+        <br>
+        <p><b>Mission : </b>  </p>
+        <p>
+            To deliver superior heating and cooling service with an unmatched client experience, resulting in the highest levels of respect from our community and a rewarding environment for our employees to succeed. 
+        </p>
+        <br>
+        <p><b>Vision : </b></p>
+        <p>
+            We will provide customer-valued solutions with the best prices, products and services to make our company is the first choice for home and office improvement.
+        </p>
+        <br>
+        <p>
+            <b>Our Main Focus: </b>
+        </p>
+        <p>Your air conditioning unit collects dust and debris from daily use. A poorly maintained air conditioning unit can harbour nasty bacteria and germs that end up circulating back into the air you breathe. Therefore, air conditioner cleaning is important to ensure clean air in your home and office. Book for aircon service and maintenance through our service. We guarantee that it is simple, easy and reliable. Don't wait until your air conditioning unit breaks down. Get your air conditioning unit professionally serviced by a hero. We provide both home and office aircon servicing.</p>
+      </div>
+    </div>
+    
+    <h1 style="text-align: center;">Collaborate With</h1>
+    <div class="supporting">
+      <div class="container">
+        <div class="col">
+          <img src="img/daikin.png">
+          <!-- <h2>Design</h2> -->
+          <!-- <p>Make your projects look great and interact beautifully.</p> -->
+          <!-- <a href="#" class="btn-default">Learn More</a> -->
+          
+        </div>
+        <div class="col">
+          <img src="img/fuji.png">
+          <!-- <h2>Develop</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a> -->
+          
+        </div>
+        <div class="col">
+          <img src="img/mitsu.jpg">
+          <!-- <h2>Deploy</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a> -->
+          
+        </div>
+        <div class="col">
+          <img src="img/toshiba.png">
+          <!-- <h2>Deploy</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a> -->
+          
+        </div>
+        <div class="col">
+          <img src="img/panasonic.png">
+          <!-- <h2>Deploy</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a> -->
+          
+        </div>
+        <div class="col">
+          <img src="img/york.png">
+          <!-- <h2>Deploy</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a> -->
+          
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------- -->
+    <!-- ----------------------------------------------------team-------------------------------------------------------------- -->
+    <!-- ----------------------------------------footer------------------------------------------ -->
+    <div class="footer-p">
+        <div class="container">
+          <p>&copy; PACIFIC AIR SYSTEMS</p>
+        </div>
+      </div>
+    <!-- ---------------------------------------------------------------------------------------- -->
+    <!-- -------------------------------------------------------------------------------------------- -->
+  
+  </html>

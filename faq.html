@@ -1,0 +1,179 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <title>FAQ</title>
+  </head>
+  <style>
+    * {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: auto;
+}
+
+.container {
+  max-width: 100vh;
+  margin: 0 auto;
+}
+
+.faq-heading {
+  margin-top: 45px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.faq-card {
+  border: 1px solid #dce0e8;
+  border-radius: 6px;
+  padding: 24px 20px;
+  margin-bottom: 12px;
+  list-style: none;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq-open-icon {
+  font-size: 22px;
+  position: absolute;
+  top: 18px;
+  right: 24px;
+  font-weight: 700;
+}
+
+details[open] .faq-open-icon {
+  top: 18px;
+  right: 24px;
+}
+
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details[open] summary {
+  color: #0186ff;
+  font-weight: 500;
+}
+
+details[open] .faq-card-spoiler {
+  display: inline-block;
+  padding-top: 8px;
+  color: #8b8b9a;
+}
+
+.faq-aftertext {
+  text-align: center;
+  color: #8b8b9a;
+}
+.header {
+    background-color:#333333;
+  }
+   
+  .container-p {
+    max-width: 870px;
+    margin: 0 0;
+    padding: 0 10px;
+  }
+  .nav {
+    position: relative;
+    left: 480px;
+
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .nav li  {
+    display:inline;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform:uppercase;
+    margin-left:10px;
+    margin-right:10px;
+    cursor: pointer;
+  }
+  
+.footer-p {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+position: relative;
+top:24px;
+  }
+  
+  .footer-p p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 30px;
+  }
+  </style>
+  
+  <body>
+    <div class="header">
+        <div class="container-p">
+          <ul class="nav">
+            <li><a style="color:white;text-decoration:none" href="index.html">Home</a></li>
+            <li><a style="color:white;text-decoration:none" href="about_us.html">About</a></li>
+                      <li><a style="color:white;text-decoration:none" href="products.html">Product</a></li>
+            <li><a style="color:white;text-decoration:none" href="faq.html">FAQ</a> </li>
+            <li><a style="color:white;text-decoration:none" href="testimonial.html">Testimonial</a> </li>
+            <li><a style="color:white;text-decoration:none" href="contact.html">Contact</a> </li>
+          </ul>
+        </div>
+      </div>
+    <main>
+      <div class="container">
+        <h2 class="faq-heading">Frequently asked questions</h2>
+  
+        <details class="faq-card">
+          <summary>Why my air-cond is not working? <span class="faq-open-icon">+</span></summary>
+          <span class="faq-card-spoiler">If your air-cond unit is not working, then it’s time to call in the professionals. We provide all types of AC services, and our technicians are experienced in diagnosing problems with units.</span>
+        </details>
+        <details class="faq-card">
+          <summary>Can I repair my own air conditioner?<span class="faq-open-icon">+</span></summary>
+          <span class="faq-card-spoiler">It’s not recommended that you attempt to fix your own air cond unit. You could potentially make the problem worse, so it is best to let our technicians handle all types of AC services in Terengganu.</span>
+        </details>
+        <details class="faq-card">
+          <summary>How long does it take to service an air conditioner? <span class="faq-open-icon">+</span></summary>
+          <span class="faq-card-spoiler">This depends on the type of AC service you need. For example, if it is a general maintenance check then we can do this in one hour or less.
+            However, more complex services like aircon installation and repair may take longer than an hour.
+            </span>
+        </details>
+  
+      </div>
+    </main>
+    <div class="footer-p" style="position: relative; top: 380px">
+        <div class="container">
+          <p style="position: relative;right: 0px;">&copy; PACIFIC AIR SYSTEMS</p>
+        </div>
+      </div>
+    <!-- <script src="./script.js"></script> -->
+    <script>
+        let summaryCollection = document.getElementsByTagName('summary');
+let signsCollection = document.getElementsByClassName('faq-open-icon');
+
+for(let i = 0; i < summaryCollection.length; i++) {
+  summaryCollection[i].onclick = function() {
+    if(signsCollection[i].innerHTML === '+') signsCollection[i].innerHTML = '—';
+    else signsCollection[i].innerHTML = '+';
+  }
+}
+    </script>
+  </body>

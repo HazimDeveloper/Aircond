@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+    <title>Product</title>
+</head>
+<style>@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .container {
+      width: 100%;
+      height: 100%;
+      padding: 0px 8%;
+    }
+    
+    .container h1 {
+      text-align: center;
+      padding-top: 10%;
+      margin-bottom: 60px;
+      font-weight: 600;
+      position: relative;
+    }
+    
+    .container h1::after {
+      content: '';
+      background: #303ef7;
+      width: 100px;
+      height: 5px;
+      position: absolute;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 30px;
+    }
+    
+    .service {
+      text-align: center;
+      padding: 25px 10px;
+      border-radius: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      background: transparent;
+      transition: transform 0.5s, background 0.5s;
+    }
+    
+    .service i {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #303ef7;
+    }
+    
+    .service h2 {
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+    
+    .service:hover {
+      background: #303ef7;
+      color: #fff;
+      transform: scale(1.05);
+    }
+    
+    .service:hover i {
+      color: #fff;
+    }
+    .header {
+    background-color:#333333;
+  }
+  
+  .container-header {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  .nav {
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .nav li  {
+    display:inline;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform:uppercase;
+    margin-left:10px;
+    margin-right:10px;
+    cursor: pointer;
+  }
+    
+  .footer-p {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+    position: relative;
+    top:88px
+  }
+  
+  .footer p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+    </style>
+
+   
+
+<body>
+    <div class="header">
+        <div class="container-header">
+          <ul class="nav">
+            <li><a style="color:white;text-decoration:none" href="index.html">Home</a></li>
+            <li><a style="color:white;text-decoration:none" href="about_us.html">About</a></li>
+                      <li><a style="color:white;text-decoration:none" href="products.html">Product</a></li>
+            <li><a style="color:white;text-decoration:none" href="faq.html">FAQ</a> </li>
+            
+            <li><a style="color:white;text-decoration:none" href="testimonial.html">Testimonial</a> </li>
+            <li><a style="color:white;text-decoration:none" href="contact.html">Contact</a> </li>
+          </ul>
+        </div>
+      </div>
+
+    <div class="container" style="margin-bottom: 100px;">
+      <h1>Our Services</h1>
+      <div class="row">
+        <div class="service">
+          <!-- <i class="fas fa-laptop-code"></i> -->
+          <img src="img/aircond.jpg" width="300px" alt="">
+          <h2>Air Cond general Cleaning</h2>
+          <p>Have you noticed your air cond unit is struggling to cool down the room? A dirty filter can make it worse.
+          </p>
+        </div>
+        <div class="service">
+          <!-- <i class="fas fa-facebook"></i> -->
+          <img src="img/aircond2.jpg" width="300px" alt="">
+          <h2>Air Cond repair</h2>
+          <p>
+            There are many reasons why your air cond unit might not be working. It could be a malfunctioning motor, compressor or controller board
+          </p>
+        </div>
+        <div class="service">
+          <!-- <i class="fab fa-sketch"></i> -->
+          <img src="img/aircond3.jpg" width="300px" alt="">
+          <h2>Clean your aircond</h2>
+          <p>Make sure your air cond can cool down your room.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-p">
+        <div class="container">
+          <p>&copy; PACIFIC AIR SYSTEMS</p>
+        </div>
+      </div>
+</body>
+</html>

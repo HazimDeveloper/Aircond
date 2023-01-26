@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial</title>
+</head>
+<style>
+  body{
+    margin: 0;
+  }
+    
+  .header {
+    background-color:#333333;
+  }
+  
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  
+  .nav {
+    margin: 0;
+    padding: 20px 0;
+  }
+  
+  .nav li  {
+    display:inline;
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform:uppercase;
+    margin-left:10px;
+    margin-right:10px;
+    cursor: pointer;
+  }
+     .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+  
+  .footer p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  body {
+  font-family: tahoma;
+  /* background-image: url(https://s3.ca-central-1.amazonaws.com/image-web-frankie/BackgroundBlue.jpg); */
+  background-size: cover;
+  background-position: center;
+  background-color: #4b4646;
+}
+
+.testimonial {
+  /* background-color: white; */
+  text-align: center;
+  padding: 30px 30px 50px;
+  margin: 100px 15px 160px;
+  position: relative;
+}
+
+.testimonial::before,
+.testimonial::after {
+  content: "";
+  border-top: 40px solid white;
+  /* border-right: 125px solid transparent; */
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+}
+
+.testimonial::after {
+  border-right: none;
+  /* border-left: 125px solid transparent; */
+  left: auto;
+  right: 0;
+}
+
+.testimonial .icon {
+  display: inline-block;
+  font-size: 80px;
+  color: #016d9b;
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.testimonial .description {
+  font-size: 14px;
+  color: white;
+  text-align: justify;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.testimonial .testimonial-content {
+  width: 100%;
+  left: 0;
+  position: absolute;
+}
+
+.testimonial .pic {
+  display: inline-block;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 4px #016d9b;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.testimonial .pic img {
+  width: 100%;
+  height: auto;
+}
+
+.testimonial .name {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
+  margin: 10px 0 5px 0;
+}
+
+.testimonial .title {
+  display: block;
+  font-size: 14px;
+  color: #ffd9b8;
+}
+
+.owl-controls {
+  margin-top: 20px;
+}
+
+.owl-pagination {
+  display: flex;
+  justify-content: center;
+}
+
+.owl-page {
+  height: 10px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10%;
+}
+
+.owl-page:hover,
+.owl-page.active {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.owl-page:not(first-item) {
+  margin-left: 10px;
+}
+
+</style>
+<body>
+    <div class="header">
+        <div class="container">
+          <ul class="nav">
+            <li><a style="color:white;text-decoration:none" href="index.html">Home</a></li>
+            <li><a style="color:white;text-decoration:none" href="about_us.html">About</a></li>
+                      <li><a style="color:white;text-decoration:none" href="products.html">Product</a></li>
+            <li><a style="color:white;text-decoration:none" href="faq.html">FAQ</a> </li>
+            <li><a style="color:white;text-decoration:none" href="testimonial.html">Testimonial</a> </li>
+            <li><a style="color:white;text-decoration:none" href="contact.html">Contact</a> </li>
+          </ul>
+        </div>
+      </div>
+      
+      <h1 class="text-center " style="color: #fff;margin-top: 100px;margin-left: 100px;" >Testimonial</h1>
+      <div class="demo" style="position: relative;bottom: 100px;">
+        <div class="container">
+          <div class="row">
+            <div id="testimonial-slider" class="owl-carousel">
+              <div class="testimonial">
+                <span class="icon fa fa-quote-left"></span>
+                
+                <div class="testimonial-content">
+                  <div class="pic">
+                    <img src="https://picsum.photos/130/130?image=1027" alt="">
+                  </div>
+                  <h3 class="name">Airin </h3>
+                  <p class="name">
+                    Fast And Good Service
+                           </p>
+                  <!-- <span class="title">Project Manager</span> -->
+                </div>
+              </div>
+              
+              <div class="testimonial">
+                <span class="icon fa fa-quote-left"></span>
+                
+                <div class="testimonial-content">
+                  <div class="pic">
+                    <img src="https://picsum.photos/130/130?image=839" alt="">
+                  </div>
+                  <h3 class="name">Afiq Halim</h3>
+                  <!-- <span class="title">Web Developer</span> -->
+                  <p class="name">
+                    My Room So Cold when the aircond repaired
+                    </p>
+                </div>
+             
+              </div>
+              <div class="testimonial" style="margin-bottom: 100px;">
+                <span class="icon fa fa-quote-left"></span>
+               
+                <div class="testimonial-content">
+                  <div class="pic">
+                    <img src="https://picsum.photos/130/130?image=856" alt="">
+                  </div>
+                  <h3 class="name">Hakas</h3>
+                  <!-- <span class="title">Web Developer</span> -->
+                
+                  <p class="name">
+                    My Aircond so cold
+                  </p>
+                </div>
+              </div>
+              
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="footer">
+        <div class="container">
+          <p >&copy; PACIFIC AIR SYSTEMS</p>
+        </div>
+      </div>
+</body>
+</html>
