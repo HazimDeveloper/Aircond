@@ -1,16 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonial</title>
-</head>
-<style>
-  body{
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+  <!-- <link rel='stylesheet' href='style.css'/> -->
+  </head>
+  <style>
+    html, body {
     margin: 0;
-  }
+    padding: 0;
+    overflow:initial;
     
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+  }
+  
   .header {
     background-color:#333333;
   }
@@ -20,7 +23,7 @@
     margin: 0 auto;
     padding: 0 10px;
   }
-
+  
   
   .nav {
     margin: 0;
@@ -38,7 +41,99 @@
     margin-right:10px;
     cursor: pointer;
   }
-     .footer {
+  
+  :root{
+    --main-color:#62a1a1;
+    --secound-color:#735F32;
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+/* start testimonails */
+.testim{
+  position: relative;
+  padding: 80px 60px;
+}
+.testim h2{
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.testim::before{
+  position: absolute;
+  content: "";
+  width: 50%;
+  top: 0;
+  left: 0;
+  background-color: #C69749;
+  height: 100%;
+  z-index: -1;
+    }
+
+.testim::after{
+  position: absolute;
+  content: "";
+  width: 50%;
+  top: 0;
+  right:  0;
+  background-color: #282A3A;
+  height: 100%;
+    }
+    
+.testim-content{
+position: relative;
+display: flex;
+justify-content: space-around;
+gap: 30px;
+
+}
+
+.testim-box{
+z-index: 2;
+background-color: var(--secound-color);
+padding: 20px 30px;
+border-radius:5px
+}
+
+.testim-box:hover{
+  background-color: #1a67d3;
+}
+
+
+.testim-box-content img{
+  top: -10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  float: left;
+  margin-right: 30px;
+  position: relative;
+
+}
+
+.testim-content h3{
+  color: #fff;
+  font-size: 1.3rem;
+  }
+  .testim-box > p{
+    color: rgb(209, 194, 194);
+    font-style: italic;
+    padding-bottom: 20px;
+  }
+.testim-box-content p{
+color: var(--main-color);
+}
+/* endtestimonails */
+
+
+
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  .footer {
     background-color: #333;
     color: #fff;
     padding: 30px 0;
@@ -49,190 +144,99 @@
     text-transform: uppercase;
     font-size: 16px;
   }
-  body {
-  font-family: tahoma;
-  /* background-image: url(https://s3.ca-central-1.amazonaws.com/image-web-frankie/BackgroundBlue.jpg); */
-  background-size: cover;
-  background-position: center;
-  background-color: #4b4646;
-}
-
-.testimonial {
-  /* background-color: white; */
-  text-align: center;
-  padding: 30px 30px 50px;
-  margin: 100px 15px 160px;
-  position: relative;
-}
-
-.testimonial::before,
-.testimonial::after {
-  content: "";
-  border-top: 40px solid white;
-  /* border-right: 125px solid transparent; */
-  position: absolute;
-  bottom: -40px;
-  left: 0;
-}
-
-.testimonial::after {
-  border-right: none;
-  /* border-left: 125px solid transparent; */
-  left: auto;
-  right: 0;
-}
-
-.testimonial .icon {
-  display: inline-block;
-  font-size: 80px;
-  color: #016d9b;
-  margin-bottom: 20px;
-  opacity: 0.6;
-}
-
-.testimonial .description {
-  font-size: 14px;
-  color: white;
-  text-align: justify;
-  margin-bottom: 30px;
-  opacity: 0.9;
-}
-
-.testimonial .testimonial-content {
-  width: 100%;
-  left: 0;
-  position: absolute;
-}
-
-.testimonial .pic {
-  display: inline-block;
-  border: 4px solid white;
-  border-radius: 50%;
-  box-shadow: 0 0 4px 4px #016d9b;
-  overflow: hidden;
-  z-index: 1;
-  position: relative;
-}
-
-.testimonial .pic img {
-  width: 100%;
-  height: auto;
-}
-
-.testimonial .name {
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  text-transform: capitalize;
-  margin: 10px 0 5px 0;
-}
-
-.testimonial .title {
-  display: block;
-  font-size: 14px;
-  color: #ffd9b8;
-}
-
-.owl-controls {
-  margin-top: 20px;
-}
-
-.owl-pagination {
-  display: flex;
-  justify-content: center;
-}
-
-.owl-page {
-  height: 10px;
-  width: 40px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 10%;
-}
-
-.owl-page:hover,
-.owl-page.active {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.owl-page:not(first-item) {
-  margin-left: 10px;
-}
-
-</style>
-<body>
+  
+  @media (max-width: 500px) {
+    .main h1 {
+      font-size: 50px;
+      padding: 0 40px;
+    }
+  
+    .supporting .col {
+      width: 100%;
+    }
+  }
+  </style>
+  <body>
     <div class="header">
-        <div class="container">
-          <ul class="nav">
-            <li><a style="color:white;text-decoration:none" href="index.html">Home</a></li>
-            <li><a style="color:white;text-decoration:none" href="about_us.html">About</a></li>
-                      <li><a style="color:white;text-decoration:none" href="products.html">Product</a></li>
-            <li><a style="color:white;text-decoration:none" href="faq.html">FAQ</a> </li>
-            <li><a style="color:white;text-decoration:none" href="testimonial.html">Testimonial</a> </li>
-            <li><a style="color:white;text-decoration:none" href="contact.html">Contact</a> </li>
-          </ul>
+      <div class="container">
+        <ul class="nav">
+          <li><a style="color:white;text-decoration:none" href="index.html">Home</a></li>
+          <li><a style="color:white;text-decoration:none" href="about_us.html">About</a></li>
+					<li><a style="color:white;text-decoration:none" href="products.html">Product</a></li>
+          <li><a style="color:white;text-decoration:none" href="faq.html">FAQ</a> </li>
+          <li><a style="color:white;text-decoration:none" href="testimonial.html">Testimonial</a> </li>
+          <li><a style="color:white;text-decoration:none" href="contact.html">Contact</a> </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- start testimonials -->
+<div class="testim"  >
+  <div class="container" style="padding-bottom: 30px;">
+    <h2>Testimonials</h2>
+      <div class="testim-content">
+        
+      <div class="testim-box">
+        <p>My Air-cond being better than before</p>
+        <div class="testim-box-content">
+         <!-- <img src="https://i.postimg.cc/rpRQv1sc/3.jpg" alt=""> -->
+          <h3>Ahmad Afiq</h3>
+
         </div>
       </div>
-      
-      <h1 class="text-center " style="color: #fff;margin-top: 100px;margin-left: 100px;" >Testimonial</h1>
-      <div class="demo" style="position: relative;bottom: 100px;">
-        <div class="container">
-          <div class="row">
-            <div id="testimonial-slider" class="owl-carousel">
-              <div class="testimonial">
-                <span class="icon fa fa-quote-left"></span>
-                
-                <div class="testimonial-content">
-                  <div class="pic">
-                    <img src="https://picsum.photos/130/130?image=1027" alt="">
-                  </div>
-                  <h3 class="name">Airin </h3>
-                  <p class="name">
-                    Fast And Good Service
-                           </p>
-                  <!-- <span class="title">Project Manager</span> -->
-                </div>
-              </div>
-              
-              <div class="testimonial">
-                <span class="icon fa fa-quote-left"></span>
-                
-                <div class="testimonial-content">
-                  <div class="pic">
-                    <img src="https://picsum.photos/130/130?image=839" alt="">
-                  </div>
-                  <h3 class="name">Afiq Halim</h3>
-                  <!-- <span class="title">Web Developer</span> -->
-                  <p class="name">
-                    My Room So Cold when the aircond repaired
-                    </p>
-                </div>
-             
-              </div>
-              <div class="testimonial" style="margin-bottom: 100px;">
-                <span class="icon fa fa-quote-left"></span>
-               
-                <div class="testimonial-content">
-                  <div class="pic">
-                    <img src="https://picsum.photos/130/130?image=856" alt="">
-                  </div>
-                  <h3 class="name">Hakas</h3>
-                  <!-- <span class="title">Web Developer</span> -->
-                
-                  <p class="name">
-                    My Aircond so cold
-                  </p>
-                </div>
-              </div>
-              
-              </div>
+        <div class="testim-box">
+
+          <p>Fast And Cheap Service Thank You So Much</p>
+          <div class="testim-box-content">
+            <!-- <img src="https://i.postimg.cc/rpRQv1sc/3.jpg" alt=""> -->
+            <h3>Muhammad Hazim</h3>
+           </div>
+        </div>
+          <div class="testim-box">
+  
+            <p>I was repeat this service again and again and never dissapointed me</p>
+            <div class="testim-box-content">
+              <!-- <img src="img/" alt=""> -->
+              <h3>Ahmad Firas</h3>
             </div>
           </div>
+
+        </div>
+  </div>
+</div>
+<!-- end testimonils -->
+
+    <!-- <div class="supporting">
+      <div class="container">
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/design.svg">
+          <h2>Design</h2>
+          <p>Make your projects look great and interact beautifully.</p>
+          <a href="#" class="btn-default">Learn More</a>
+          
+        </div>
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/develop.svg">
+          <h2>Develop</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a>
+          
+        </div>
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/deploy.svg">
+          <h2>Deploy</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a>
+          
         </div>
       </div>
+      <div class="clearfix"></div>
+    </div> -->
+
     <div class="footer">
-        <div class="container">
-          <p >&copy; PACIFIC AIR SYSTEMS</p>
-        </div>
+      <div class="container">
+        <p >&copy; PACIFIC AIR SYSTEMS</p>
       </div>
-</body>
+    </div>
+  </body>
 </html>

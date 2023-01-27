@@ -1,101 +1,31 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Style inputs */
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: #2b232c;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  
-}
-
-input[type=submit]:hover {
-  background-color: #b2b6b2;
-  color:black;
-}
-
-/* Style the container/contact section */
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 10px;
-}
-
-/* Create two columns that float next to eachother */
-.column {
-  float: left;
-  width: 50%;
-  margin-top: 6px;
-  padding: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-
-.footer-p {
-    background-color: #333;
-    color: #fff;
-    padding: 30px 0;
-position: relative;
-top:24px;
-  }
-  
-  .footer-p p {
-    font-family: 'Raleway', sans-serif;
-    text-transform: uppercase;
-    font-size: 14px;
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+  <!-- <link rel='stylesheet' href='style.css'/> -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  />
+  </head>
+  <style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    overflow:initial;
   }
   
   .header {
     background-color:#333333;
   }
   
-  .container-p {
+  .container {
     max-width: 940px;
     margin: 0 auto;
     padding: 0 10px;
   }
+  
+  
   .nav {
-    position: relative;
-    left: 40px;
-
     margin: 0;
     padding: 20px 0;
   }
@@ -111,61 +41,386 @@ top:24px;
     margin-right:10px;
     cursor: pointer;
   }
-</style>
-</head>
-<body>
+  
+  
+  .clearfix {
+    clear: both;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 30px 0;
+  }
+  
+  .footer p {
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  
+  @media (max-width: 500px) {
+    .main h1 {
+      font-size: 50px;
+      padding: 0 40px;
+    }
+  
+    .supporting .col {
+      width: 100%;
+    }
+  }
+  *, *:before, *:after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #31c2aa;
+  font-size: 12px;
+}
+
+body, button, input {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.background {
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 0 1 700px;
+  margin: auto;
+  padding: 10px;
+}
+
+.screen {
+  position: relative;
+  background: #3e3e3e;
+  border-radius: 15px;
+}
+
+.screen:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+  z-index: -1;
+}
+
+.screen-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: #4d4d4f;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.screen-header-left {
+  margin-right: auto;
+}
+
+.screen-header-button {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 3px;
+  border-radius: 8px;
+  background: white;
+}
+
+.screen-header-button.close {
+  background: #ed1c6f;
+}
+
+.screen-header-button.maximize {
+  background: #e8e925;
+}
+
+.screen-header-button.minimize {
+  background: #74c54f;
+}
+
+.screen-header-right {
+  display: flex;
+}
+
+.screen-header-ellipsis {
+  width: 3px;
+  height: 3px;
+  margin-left: 2px;
+  border-radius: 8px;
+  background: #999;
+}
+
+.screen-body {
+  display: flex;
+}
+
+.screen-body-item {
+  flex: 1;
+  padding: 50px;
+}
+
+.screen-body-item.left {
+  display: flex;
+  flex-direction: column;
+}
+
+.app-title {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #31c2aa;
+  font-size: 26px;
+}
+
+.app-title:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 25px;
+  height: 4px;
+  background: #31c2aa;
+}
+
+.app-contact {
+  margin-top: 10px;
+  font-size: 8px;
+  color: #888;
+}
+
+.app-form-group {
+  margin-bottom: 15px;
+}
+
+.app-form-group.message {
+  margin-top: 40px;
+}
+
+.app-form-group.buttons {
+  margin-bottom: 0;
+  text-align: right;
+}
+
+.app-form-control {
+  width: 100%;
+  padding: 10px 0;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #666;
+  color: #ddd;
+  font-size: 14px;
+  text-transform: uppercase;
+  outline: none;
+  transition: border-color .2s;
+}
+
+.app-form-control::placeholder {
+  color: #666;
+}
+
+.app-form-control:focus {
+  border-bottom-color: #ddd;
+}
+
+.app-form-button {
+  background: none;
+  border: none;
+  color: #31c2aa;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+}
+
+.app-form-button:hover {
+  color: #b9134f;
+}
+
+.credits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  color: #ffa4bd;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.credits-link {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.dribbble {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+}
+
+@media screen and (max-width: 520px) {
+  .screen-body {
+    flex-direction: column;
+  }
+
+  .screen-body-item.left {
+    margin-bottom: 30px;
+  }
+
+  .app-title {
+    flex-direction: row;
+  }
+
+  .app-title span {
+    margin-right: 12px;
+  }
+
+  .app-title:after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .screen-body {
+    padding: 40px;
+  }
+
+  .screen-body-item {
+    padding: 0;
+  }
+}
+.soc-med a{
+  text-decoration: none;
+}
+.soc-med .yt{
+  color: rgb(219, 7, 7);
+}
+.soc-med .fb{
+  color: rgb(59, 59, 216);
+}
+.soc-med .tw{
+  color: lightblue;
+}
+.soc-med a:hover{
+  font-size: 15px;
+}
+  </style>
+  <body>
     <div class="header">
-        <div class="container-p">
-          <ul class="nav">
-            <li><a style="color:white;text-decoration:none" href="index.html">Home</a></li>
-            <li><a style="color:white;text-decoration:none" href="about_us.html">About</a></li>
-                      <li><a style="color:white;text-decoration:none" href="products.html">Product</a></li>
-            <li><a style="color:white;text-decoration:none" href="faq.html">FAQ</a> </li>
-            <li><a style="color:white;text-decoration:none" href="testimonial.html">Testimonial</a> </li>
-            <li><a style="color:white;text-decoration:none" href="contact.html">Contact</a> </li>
-          </ul>
-        </div>
-      </div>
-
-<div class="container" style="background-color: whitesmoke;padding: 95px;">
-  <div style="text-align:center">
-    <h2>Contact Us</h2>
-    <p>Swing by for a cup of coffee, or leave us a message:</p>
-  </div>
-  <div class="row">
-    <div class="column" style="font-size: 16px;">
-      <!-- <img src="/w3images/map.jpg" style="width:100%"> -->
-      <h1>Book Your Slot Today</h1>
-      <p>Phone : 019 – 1045687</p>
-      <p>Email : <a style="color:#333333;text-decoration:none" href="mailto:pacificairsystems@gmail.com">pacificairsystems@gmail.com</a> </p>
-      <p>Visit Our Social Media : </p>
-      <div class="row">
-        <div class="col" style="font-size: 30px;text-decoration: none;">
-          <a href=""> <i style="color: red;" class="fa-brands fa-square-youtube"></i></a>
-          <!-- <a href=""><i class="fa-brands fa-square-youtube"></i> </a> -->
-        <a href=""><i class="fa-brands fa-facebook" style="color: lightblue;"></i></a>
-        <a href=""><i class="fa-brands fa-twitter" style="color: lightskyblue;"></i> </a>  
-        </div>
+      <div class="container">
+        <ul class="nav">
+          <li><a style="color:white;text-decoration:none" href="index.html">Home</a></li>
+          <li><a style="color:white;text-decoration:none" href="about_us.html">About</a></li>
+					<li><a style="color:white;text-decoration:none" href="products.html">Product</a></li>
+          <li><a style="color:white;text-decoration:none" href="faq.html">FAQ</a> </li>
+          <li><a style="color:white;text-decoration:none" href="testimonial.html">Testimonial</a> </li>
+          <li><a style="color:white;text-decoration:none" href="contact.html">Contact</a> </li>
+        </ul>
       </div>
     </div>
-    <div class="column">
-      <form action="" method="post">
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-        <label for="subject">Message</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
-        <input type="submit" value="Submit">
-      </form>
+    <div class="background">
+      <div class="container">
+        <div class="screen">
+          <div class="screen-header">
+            <div class="screen-header-left">
+              <div class="screen-header-button close"></div>
+              <div class="screen-header-button maximize"></div>
+              <div class="screen-header-button minimize"></div>
+            </div>
+            <div class="screen-header-right">
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+              <div class="screen-header-ellipsis"></div>
+            </div>
+          </div>
+          <div class="screen-body">
+            <div class="screen-body-item left">
+              <div class="app-title">
+                <span>CONTACT</span>
+                <span>US</span>
+              </div>
+              <div class="soc-med" style="margin-top: 40px;">
+              <div ><a href="" class="fb" >Facebook</a> </div>
+              <div ><a href="" class="tw" >Twitter</a> </div>
+              <div ><a href="" class="yt" >Youtube</a> </div>
+            </div>
+            <div class="app-contact">EMAIL : <a href="mailto:pacificairsystem@gmail.com" style="text-decoration: none;color: white;">pacificairsystem@gmail.com</a></div>
+              <div class="app-contact">CONTACT INFO : 09-10456872</div>
+            
+            </div>
+            <div class="screen-body-item">
+              <div class="app-form">
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="NAME" value="">
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="EMAIL">
+                </div>
+                <div class="app-form-group">
+                  <input class="app-form-control" placeholder="CONTACT NO">
+                </div>
+                <div class="app-form-group message">
+                  <input class="app-form-control" placeholder="MESSAGE">
+                </div>
+                <div class="app-form-group buttons">
+                  <!-- <button class="app-form-button">CANCEL</button> -->
+                  <button class="app-form-button">SEND</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
     </div>
-  </div>
-</div>
+    
 
-<div class="footer-p">
-    <div class="container-p">
-      <p style="position: relative;top: 10px;">&copy; PACIFIC AIR SYSTEMS</p>
+    <!-- <div class="supporting">
+      <div class="container">
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/design.svg">
+          <h2>Design</h2>
+          <p>Make your projects look great and interact beautifully.</p>
+          <a href="#" class="btn-default">Learn More</a>
+          
+        </div>
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/develop.svg">
+          <h2>Develop</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a>
+          
+        </div>
+        <div class="col">
+          <img src="https://s3.amazonaws.com/codecademy-content/projects/broadway/deploy.svg">
+          <h2>Deploy</h2>
+          <p>Use modern tools to turn your design into a web site</p>
+          <a href="#" class="btn-default">Learn More</a>
+          
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div> -->
+
+    <div class="footer">
+      <div class="container">
+        <p >&copy; PACIFIC AIR SYSTEMS</p>
+      </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
